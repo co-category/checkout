@@ -33,8 +33,8 @@ object Cart {
   def buyOneAppleGetOneFree(cart: Cart): Cart = {
     val numberOfApples = cart.items.count(_ == APPLE)
     val offer = (numberOfApples / 2) + (numberOfApples % 2)
-    val updatedCart = cart.items.filterNot(item => item == APPLE) ++ List.fill(offer)(APPLE)
-    Cart(updatedCart)
+    val updatedItems = cart.items.filterNot(item => item == APPLE) ++ List.fill(offer)(APPLE)
+    Cart(updatedItems)
   }
 
   /**
@@ -46,8 +46,8 @@ object Cart {
   def buyThreeOrangesForThePriceOfTwo(cart: Cart): Cart = {
     val numberOfOranges = cart.items.count(_ == ORANGE)
     val offer = ((numberOfOranges / 3) * 2) + (numberOfOranges % 3)
-    val updatedCart = cart.items.filterNot(item => item == ORANGE) ++ List.fill(offer)(ORANGE)
-    Cart(updatedCart)
+    val updatedItems = cart.items.filterNot(item => item == ORANGE) ++ List.fill(offer)(ORANGE)
+    Cart(updatedItems)
   }
 
 }
