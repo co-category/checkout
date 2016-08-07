@@ -25,7 +25,7 @@ object Cart {
   def totalCostWithOffers: (Cart) => Double = totalCost _ compose buyOneAppleGetOneFree _ compose buyThreeOrangesForThePriceOfTwo _
 
   /**
-    * Returns a new cart with the buy one apple get one free price offer
+    * Returns a new cart with the buy one apple get one free price offer applied
     *
     * @param cart
     * @return a new cart with the offer applied
@@ -38,7 +38,7 @@ object Cart {
   }
 
   /**
-    * Returns a new cart with the buy three oranges for the price of two offer
+    * Returns a new cart with the buy three oranges for the price of two offer applied
     *
     * @param cart
     * @return a new cart with the offer applied
